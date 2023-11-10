@@ -27,5 +27,3 @@ st.text_input(label="Add Item", label_visibility='hidden', placeholder="Add a to
 
 st.session_state
 
-
-
