@@ -9,12 +9,13 @@ def add_todo():
     todos.append(todo)
     functions.write_todos(todos)
 
+
 st.title("My Todo App")
 st.subheader("Add, delete, edit your list")
 st.write("My Current List:")
 
-for list in todos:
-    st.checkbox(list)
+for todo_list in todos:
+    st.checkbox(todo_list, key=todo_list)
 
 st.text_input(label="Add Item", label_visibility='hidden', placeholder="Add a todo",
               on_change=add_todo, key='new_todo')
